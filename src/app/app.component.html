@@ -1,16 +1,19 @@
 <nav class="navbar navbar-light bg-light">
   <span class="navbar-text">
-    Alex Alves da Silva - Desenvolvedor web (página em desenvolvimento)
+    Alex Alves da Silva - Desenvolvedor web (página em construção)
   </span>
 </nav>
 <div class="card-body">
-  <h5 class="card-title">
-    Site desenvolvido com Angular com o objetivo de
+  <h5 class="card-title">     
+    Site desenvolvido utilizando Angular com o objetivo de
     ilustrar conhecimentos sobre desenvolvimento web
-  </h5>
-  
-  <a href="#" class="btn btn-primary">Outras tecnologias</a>
+  </h5>  
+<!-- Button trigger modal -->
+<button type="button" class="btn btn-primary" (click)="openModal()">
+  Projetos
+</button>
 </div>
 <div class="card-footer text-muted">
   E-mail: AlxAlvsContato@gmail.com
 </div>
+<app-modal [display]="callModal"></app-modal>

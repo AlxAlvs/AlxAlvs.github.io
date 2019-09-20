@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, ElementRef, ViewChild, AfterViewInit } from '@angular/core';
+import { ModalComponent } from './modal/modal.component';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +7,15 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'estudoAngular';
+  title = 'estudoAngular'; 
+  callModal = true;
+
+  @ViewChild(ModalComponent, {static: false}) child;
+  
+
+  openModal(){
+    this.callModal = false;
+    this.child.clickModal();
+  }
+
 }

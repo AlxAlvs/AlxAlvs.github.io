@@ -1,13 +1,14 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-
-import { ModalRoutingModule } from './modal-routing.module';
 import { ModalComponent } from './modal.component';
+import { BrowserModule } from '@angular/platform-browser';
 
 
 @NgModule({
   declarations: [ModalComponent],
   imports: [
+    BrowserModule,
+    CommonModule
   ],
   exports: [ModalComponent],
 })

@@ -2,11 +2,24 @@
 @import'https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css';
 
 .card-body{
-    border-block: 2px;
     text-align: center;
-    height: 80vh;
+    height: 85vh;
     width: 100%;
     background:rgba(0,0,0,0.8);
+    background-image: linear-gradient(to right, #1e272e , transparent);
+    box-shadow: 2px 2px 4px #888888;
+}
+
+#imageDiv{
+    height: 50vh;
+    width: 80%;
+    margin-left: 10%;
+    box-shadow: 2px 2px 4px #888888;
+}
+
+.backgroundImage{
+    background: url('images/coffee.jpg')no-repeat;
+    background-size:cover;
 }
 
 h5{
@@ -18,8 +31,69 @@ h5{
 }
 
 .card-footer{
-
     text-align: center;
 }
 
+.pagination{
+    position: absolute;
+    top:85%;
+    width: 30%;
+    text-align: center;
+    transform: translateY(-50%);
+    margin-left: 35%;
+    margin-right: 35%;
+}
+
+.pagination a{
+    margin: 6px 1px;
+    display: inline-block;
+    width: 30px;
+    background: #485460;
+    height: 30px;
+    line-height: 30px;
+    color: #fff;
+    font-weight: 600;
+    transition: 0.3s;
+    position: relative;
+    padding-right: 12px;
+}
+
+.prev,.next{
+    padding-right: 12px !important;
+    font-size: 20px;
+}
+
+.pagination a:hover{
+    color: #ffd32a
+}
+
+.active{
+    color: #ffd32a !important;
+}
+
+.prev{
+    border-radius: 15px 0 0 15px;
+    padding-left: 5px;
+}
+
+.next{
+    border-radius: 0 15px 15px 0;
+} 
+
+.pagination a::before,.pagination a:after {
+    content:"";
+    position: absolute;
+    border-top: 15px solid transparent;
+    border-bottom: 15px solid transparent;
+}
+
+.num::before,.next::before{
+    border-right: 10px solid #485460;
+    right: 100%;
+}
+
+.num::after,.prev:after{
+    border-right: 10px solid #f1f1f1;
+    right: 0;
+}
 

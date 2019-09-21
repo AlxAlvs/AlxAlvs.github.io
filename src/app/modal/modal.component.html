@@ -7,15 +7,23 @@
   <div class="modal-dialog modal-dialog-centered" role="document">
     <div class="modal-content">
       <div class="modal-header">
-        <p class="modal-title" id="exampleModalLongTitle">outros projetos ilustrativos</p>
+        <p class="modal-title" id="exampleModalLongTitle">Outros projetos ilustrativos</p>
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
       </div>
-      <div class="modal-body">
-        ...
+      <div class="modal-body">     
+        <div id="imageDiv">
+        </div>           
       </div>
-      <div class="modal-footer">
+      <div class="pagination">
+          <a href="#" (click)="loadImage()" class="prev"><i class="fas fa-angle-left"></i></a>
+          <a href="#" (click)="loadImage(1)" class="num active">1</a>
+          <a href="#" (click)="loadImage(2)" class="num">2</a>
+          <a href="#" (click)="loadImage(3)" class="num">3</a>
+          <a href="#" (click)="loadImage()" class="next"><i class="fas fa-angle-right"></i></a>
+      </div>
+      <div class="modal-footer">       
         <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>        
       </div>
     </div>

@@ -12,7 +12,6 @@ export class AppComponent {
 
   @ViewChild(ModalComponent, {static: false}) child;
   
-
   openModal(){
     this.callModal = false;
     this.child.clickModal();

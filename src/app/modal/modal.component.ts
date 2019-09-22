@@ -11,13 +11,14 @@ export class ModalComponent implements OnInit {
 
   images:any [] = ['assets/images/exemplo1.png','assets/images/exemplo2.png','assets/images/exemplo3.png'];
 
-  currentImage: any;
+  currentImage:any;
 
   @Input() display;
   
   ngOnInit() {
     this.display = true;
     this.loadImage(0);
+    this.currentImage = 0;
   }
 
   clickModal() {

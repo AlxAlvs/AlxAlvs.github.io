@@ -9,9 +9,9 @@ export class ModalComponent implements OnInit {
 
   constructor() {}
 
-  images:any [] = ['assets/images/exemplo1.png'];
+  images:any [] = ['assets/images/exemplo1.png','assets/images/exemplo2.png','assets/images/exemplo3.png'];
 
-  currentImage: number;
+  currentImage: any;
 
   @Input() display;
   
@@ -24,15 +24,24 @@ export class ModalComponent implements OnInit {
     document.getElementById("modal").click();
   }
 
-  loadImage(index:number){
+  loadImage(index:any){
     for(var i=0; i< this.images.length; i++) {
-      if(i == index){
+      if(i == index && this.currentImage != i){
         var img = new Image();
         img.src = this.images[i];
         img.style.width = "100%";
         img.style.height = "100%";
-        document.getElementById('imageDiv').appendChild(img);
+        var list = document.getElementById('imageDiv');
+        if (list.hasChildNodes()) {
+          list.replaceChild(img,list.childNodes[0]);
+          var element = document.getElementById(this.currentImage);
+          element.classList.remove("active");  
+        }else{
+          list.appendChild(img);
+        }                    
         this.currentImage = i;
+        var element = document.getElementById(index);
+        element.classList.add("active");
       } 
     }
   }

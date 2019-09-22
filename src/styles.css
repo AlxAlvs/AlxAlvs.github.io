@@ -10,8 +10,12 @@
     box-shadow: 2px 2px 4px #888888;
 }
 
+.modal-footer{
+    border-top: 0 none;
+}
+
 #imageDiv{
-    height: 50vh;
+    height: 40vh;
     width: 80%;
     margin-left: 10%;
     box-shadow: 2px 2px 4px #888888;
@@ -36,7 +40,7 @@ h5{
 
 .pagination{
     position: absolute;
-    top:85%;
+    top: 85%;
     width: 30%;
     text-align: center;
     transform: translateY(-50%);

@@ -42,6 +42,20 @@ export class ModalComponent implements OnInit {
         this.currentImage = i;
         var element = document.getElementById(index);
         element.classList.add("active");
+
+        switch(index){         
+          case 0: document.getElementById('myUniqueLinkId').setAttribute("href", "#");
+                  document.getElementById('description').setAttribute('data-content', "");
+          break
+          case 1: document.getElementById('myUniqueLinkId').setAttribute("href", "#");
+                  document.getElementById('description').setAttribute('data-content', "");
+          break
+          case 2: document.getElementById('myUniqueLinkId').setAttribute("href", "http://meuprimeiroprojeto.ga"); 
+                  document.getElementById('description').setAttribute('data-content', "Meu primeiro projeto (apenas para ilustrar evolução).");     
+          break
+          default:
+          break
+        }    
       } 
     }
   }

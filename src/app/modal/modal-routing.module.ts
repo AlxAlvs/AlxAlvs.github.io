@@ -4,7 +4,6 @@ import { ModalComponent } from './modal.component';
 
 
 const routes: Routes = [{
-  path:'modal', component:ModalComponent
 }];
 
 @NgModule({

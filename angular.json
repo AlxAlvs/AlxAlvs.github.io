@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "estudoAngular": {
+    "project": {
       "projectType": "application",
       "schematics": {},
       "root": "",

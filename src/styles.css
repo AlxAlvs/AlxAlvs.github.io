@@ -204,11 +204,18 @@ body.modal-open {
         top:0;
         display: block;
         background: url('images/officeDesk.jpg')no-repeat; 
-        background-size: 100% 70%;
+        background-size: 100% 80%;
         transform-origin: center center 0;
         transform: translateZ(-1px) scale(2);
         z-index: -1;
-        max-height: 60vh;
+        min-height: 100vh;
+    }
+
+    header h3 {
+        margin-top: -50px;
+        color: white;
+        margin-left: 25%;
+        margin-right: 1%;
     }
 
     .projects{
@@ -219,6 +226,7 @@ body.modal-open {
         color: white;
         padding-bottom: 20%; 
         margin-top: -35%;
+        display:inline-block;
     }
   }
 

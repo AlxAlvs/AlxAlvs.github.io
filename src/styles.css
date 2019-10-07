@@ -189,3 +189,36 @@ header * {
     right: 0;
 }
 
+body.modal-open {
+    overflow: visible;
+}
+
+/* Tratamento para exibição em telas menores*/
+@media only screen and (max-width: 600px) {
+    header::before{
+        bottom: 0;
+        content: "";
+        left: 0;
+        position: absolute;
+        right: 0;
+        top:0;
+        display: block;
+        background: url('images/officeDesk.jpg')no-repeat; 
+        background-size: 100% 70%;
+        transform-origin: center center 0;
+        transform: translateZ(-1px) scale(2);
+        z-index: -1;
+        max-height: 60vh;
+    }
+
+    .projects{
+        height: 85vh;
+        width: 100%;
+        text-align: center;   
+        background-color: #2d3436;
+        color: white;
+        padding-bottom: 20%; 
+        margin-top: -35%;
+    }
+  }
+

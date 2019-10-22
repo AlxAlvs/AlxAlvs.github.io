@@ -1,4 +1,4 @@
-import { Component, ElementRef, ViewChild, AfterViewInit } from '@angular/core';
+import { Component, ElementRef, ViewChild, AfterViewInit, OnInit } from '@angular/core';
 import { ModalComponent } from './modal/modal.component';
 
 @Component({
@@ -6,15 +6,27 @@ import { ModalComponent } from './modal/modal.component';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
-export class AppComponent {
+export class AppComponent implements OnInit{
   title = 'estudoAngular'; 
   callModal = true;
+  english:boolean = false;
 
   @ViewChild(ModalComponent, {static: false}) child;
   
-  openModal(){
-    this.callModal = false;
-    this.child.clickModal();
+  ngOnInit(): void {
+    this.english = false;
   }
 
+  openModal(){
+    this.callModal = false;
+    this.child.clickModal(this.english);
+  }
+
+  changeLanguage(){
+    if(this.english){
+      this.english = false;
+    }else{
+      this.english = true;
+    }   
+  }
 }

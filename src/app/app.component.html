@@ -3,13 +3,17 @@
     Alex Alves da Silva - Desenvolvedor web (página em construção)
   </span>
 </nav> -->
-<div>
+<div>   
   <div>
-    <div >
+    <div>
       <div>
-        <header>
+          <label class="switch">
+            <input type="checkbox" (click)="changeLanguage()">
+            <span class="slider round"><p [hidden]="english" class="language">English</p><p [hidden]="!english" class="languagePortuguese">Pt-br</p></span>
+          </label>
+        <header>         
           <h3>     
-            Alex Alves - Desenvolvedor
+            Alex Alves <p [hidden]="english">Desenvolvedor</p><p [hidden]="!english">Developer</p>
           </h3>  
         </header>
       </div>
@@ -18,13 +22,19 @@
 </div>
     <div class="projects">
       <div class="projectsContent">
-        <h4>     
+        <h4 [hidden]="english">     
           Site desenvolvido utilizando Angular com o objetivo de
           ilustrar conhecimentos sobre desenvolvimento web (páginas em construção).
         </h4>  
+        <h4 [hidden]="!english">     
+          Website developed using angular to illustrate some knowledge about web development (pages under development).
+        </h4> 
         <!-- Button trigger modal -->
-        <button type="button" class="btn btn-secondary" (click)="openModal()">
+        <button [hidden]="english" type="button" class="btn btn-secondary" (click)="openModal()">
           Projetos
+        </button>
+        <button [hidden]="!english" type="button" class="btn btn-secondary" (click)="openModal()">
+          Projects
         </button>
       </div>
     </div>

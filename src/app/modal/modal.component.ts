@@ -9,6 +9,8 @@ export class ModalComponent implements OnInit {
 
   constructor() {}
 
+  english = false;
+
   images:any [] = ['assets/images/exemplo1.png','assets/images/exemplo2.png','assets/images/exemplo3.png'];
 
   currentImage:any;
@@ -21,7 +23,10 @@ export class ModalComponent implements OnInit {
     this.currentImage = 0;
   }
 
-  clickModal() {
+  clickModal(language:boolean) {
+    this.english = language;
+    this.loadImage(0);
+    this.currentImage = 0;
     document.getElementById("modal").click();
   }
 
@@ -52,7 +57,11 @@ export class ModalComponent implements OnInit {
                   document.getElementById('description').setAttribute('data-content', "");
           break
           case 2: document.getElementById('myUniqueLinkId').setAttribute("href", "http://meuprimeiroprojeto.ga"); 
-                  document.getElementById('description').setAttribute('data-content', "Meu primeiro projeto (apenas para ilustrar evolução).");     
+                  if(!this.english){
+                    document.getElementById('description').setAttribute('data-content', "Meu primeiro projeto (apenas para ilustrar evolução).");
+                  }else{
+                    document.getElementById('description').setAttribute('data-content', "My first project. just to illustrate some code evolution.");
+                  }                   
           break
           default:
           break

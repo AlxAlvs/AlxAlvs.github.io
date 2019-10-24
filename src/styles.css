@@ -211,7 +211,6 @@ body.modal-open {
 
 .languageButton{
     margin-left:90%;
-    border: 1px solid #ccc;
     min-width: 110px !important;
     max-width: 200px;
 }
@@ -304,8 +303,7 @@ input:checked + .slider:before {
     }
 
     .languageButton{
-        margin-left:60%;
-        border: 1px solid #ccc;
+        margin-left:65%;
         min-width: 110px !important;
         max-width: 200px;
     }
@@ -335,7 +333,6 @@ input:checked + .slider:before {
 
     .languageButton{
         margin-left:80%;
-        border: 1px solid #ccc;
         min-width: 110px !important;
         max-width: 200px;
     }

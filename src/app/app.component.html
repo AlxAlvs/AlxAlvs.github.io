@@ -7,10 +7,13 @@
   <div>
     <div>
       <div>
+        <div class="rightPoint"></div>
+        <div class="languageButton">
           <label class="switch">
             <input type="checkbox" (click)="changeLanguage()">
             <span class="slider round"><p [hidden]="english" class="language">English</p><p [hidden]="!english" class="languagePortuguese">Pt-br</p></span>
           </label>
+        </div>        
         <header>         
           <h3>     
             Alex Alves <p [hidden]="english">Desenvolvedor</p><p [hidden]="!english">Developer</p>
